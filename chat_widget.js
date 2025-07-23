@@ -12,6 +12,29 @@
     height: 100vh;
     position: relative;
   }
+  .start-chat-btn {
+  all: unset;
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #ff6e30, #d45113);
+  color: white;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  letter-spacing: 0.3px;
+  text-align: center;
+}
+
+.start-chat-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
 
     .chatbot-container {
   width: 360px;
