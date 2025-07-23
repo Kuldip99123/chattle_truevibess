@@ -235,35 +235,38 @@
 
   const widget = document.createElement('div');
   widget.innerHTML = `
-    <div class="floating-chat-btn" id="openChat">Talk to Chattle</div>
+     <div class="floating-chat-btn" onclick="toggleChatbot()">Talk to Chattle</div>
 
-    <div class="chatbot-container" id="chatbot-container">
-      <div class="company-header">
-        Metro AI HelpDesk
-        <span class="close-btn" id="closeChat">×</span>
-      </div>
-
-      <div class="screen active" id="welcome-screen">
-        <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;text-align:center;">
-          <h2>Welcome to Chattle 💜</h2>
-          <p><strong>Hi! I'm Chattle your Metro AI ChatBot, trained to assist, amuse & occasionally make you smile!</strong></p>
-          <button class="btn" id="startBtn">Start Chatting</button>
-          <p>Tap above and let’s chat 💬</p>
-        </div>
-      </div>
-
-      <div class="screen" id="chat-screen">
-        <div class="chat-box" id="chat-box"></div>
-        <div class="input-area">
-          <input type="text" id="user-input" placeholder="Type a message..." />
-          <button class="send-btn" id="sendBtn">
-            <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
-          </button>
-        </div>
-      </div>
-
-      <div class="powered-by">Powered by <strong>TrueVibess</strong></div>
+  <div class="chatbot-container" id="chatbot-container">
+    <div class="company-header">
+      Metro AI HelpDesk
+      <span class="close-btn" onclick="toggleChatbot()">×</span>
     </div>
+
+    <!-- Welcome Screen -->
+    <div class="screen active" id="welcome-screen">
+      <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;text-align:center;">
+        <h2>Welcome to Chattle 💜</h2>
+        <p><strong>Hi! I'm Chattle your Metro AI ChatBot, trained to assist, amuse & occasionally make you smile!</strong></p>
+        <button class="btn" onclick="switchScreen('welcome-screen','chat-screen')">Start Chatting</button>
+
+        <p>Tap above and let’s chat 💬</p>
+      </div>
+    </div>
+
+    <!-- Chat Screen -->
+    <div class="screen" id="chat-screen">
+      <div class="chat-box" id="chat-box"></div>
+      <div class="input-area">
+        <input type="text" id="user-input" placeholder="Type a message..." />
+        <button class="send-btn" onclick="sendMessage()">
+          <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="powered-by">Powered by <strong>TrueVibess</strong></div>
+  </div>
   `;
   document.body.appendChild(widget);
 
