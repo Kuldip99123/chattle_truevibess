@@ -2,6 +2,17 @@
   const css = `
     @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+.body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+  }
+
     .chatbot-container {
   width: 360px;
   max-width: 90%;
